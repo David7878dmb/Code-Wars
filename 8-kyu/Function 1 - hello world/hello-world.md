@@ -1,0 +1,1 @@
+We create an arrow function in which we do not have to pass any parameters and it returns a Hello World
