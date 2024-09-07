@@ -1,0 +1,1 @@
+pasamos diferentes horas por parametros y después se multiplica por lo que seria en milisegundos

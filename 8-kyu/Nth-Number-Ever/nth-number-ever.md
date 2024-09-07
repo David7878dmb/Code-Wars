@@ -1,0 +1,1 @@
+You just need to multiply the number they give you (n) by 2 and then reset 2, and that will give you the even number in that position.
