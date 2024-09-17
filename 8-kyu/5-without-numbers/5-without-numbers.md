@@ -1,0 +1,3 @@
+In this function withoutnumber, you're creating an array named myArray that contains five elements, each of which is the string 'aa'. The function returns the length of the array using the .length property, which counts the number of elements in the array. In this case, the length of the array is 5.
+
+When you call console.log(withoutnumber()), it prints the result of the function, which is the number 5. So, the function simply returns how many elements are in the array.
