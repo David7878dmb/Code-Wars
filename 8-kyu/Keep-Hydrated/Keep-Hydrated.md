@@ -1,0 +1,2 @@
+We make each hour become half a liter of water, so 2 hours should be 1 liter of water, but if it is 3 hours it should be 1.5 but we should round down so that it is 1 liter.
+That is, they always have to be whole liters and must be rounded down.
