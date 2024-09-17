@@ -14,3 +14,5 @@ class Booking {
       return roomFee * (1 - this.discount / 100);
     }
   }
+  
+  module.exports = Booking;
