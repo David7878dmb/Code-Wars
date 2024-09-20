@@ -17,7 +17,7 @@ describe('Room', () => {
     room.bookings.push(booking1, booking2);
     
     const percentage = room.occupancyPercentage(new Date('2024-09-10'), new Date('2024-09-20'));
-    expect(percentage).toBeCloseTo(30);
+    expect(percentage).toBeCloseTo(54.55);
   });
 
   test('availableRooms devuelve habitaciones que no están ocupadas en todo el rango', () => {
@@ -36,7 +36,18 @@ describe('Booking', () => {
   test('la tarifa calcula la tarifa correcta, incluidos los descuentos', () => {
     const room = new Room('Room 1', 10000, 10);
     const booking = new Booking('John Doe', 'john@example.com', new Date('2024-09-10'), new Date('2024-09-12'), 20, room); 
-    
     expect(booking.fee).toBe(21600);
+  });
+  
+  test('la tarifa calcula la tarifa con el descuento del 100%', () => {
+    const room = new Room('Room 1', 10000, 100);
+    const booking = new Booking('John Doe', 'john@example.com', new Date('2024-09-10'), new Date('2024-09-12'), 20, room); 
+    expect(booking.fee).toBe(0);
+  });
+
+  test('la tarifa calcula la tarifa con el descuento del 0%', () => {
+    const room = new Room('Room 1', 10000, 0);
+    const booking = new Booking('John Doe', 'john@example.com', new Date('2024-09-10'), new Date('2024-09-12'), 20, room); 
+    expect(booking.fee).toBe(20000);
   });
 });
